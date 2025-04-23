@@ -24,3 +24,23 @@ class DetailOrderPage extends StatelessWidget {
       const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+         children: [
+
+          Text('Food Order: $makanan'),
+          Text('Drink Order: $minuman'),
+          Text('Food Qty Order: $jumlahMakanan'),
+          Text('Drink Qty Order: $jumlahMinuman'),
+          Text('Total Price: $totalHarga'),
+          const SizedBox(height: 20),
+          ElevatedButton(onPressed: (){
+            Navigator.pushAndRemoveUntil(context, 
+            MaterialPageRoute(builder: (context) => HomePage()),
+            (Route) => false
+            );
+          }, child: Text('Finish order'))
+        ],
+      ),
+      )
+      );
+  }
+}
